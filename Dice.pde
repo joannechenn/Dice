@@ -31,7 +31,6 @@ void setup()
       int Color;
       int radius;
       
-      
       Die(int x, int y, int w, int h, int dotR, int r, int g, int b) //constructor
       {
           //variable initializations here
@@ -40,15 +39,21 @@ void setup()
           Width = w;
           Height = h;
           radius = dotR;
+          r = (int)(Math.random() * 256);
+          g = (int)(Math.random() * 256);
+          b = (int)(Math.random() * 256);
           Color = color(r, g, b);
+          num = ((int)(Math.random() * 6) + 1);
           
       }
+      
       void roll(int n)
       {
           //your code here
           num = n;
           System.out.print(num);
       }
+      
       void show()
       {
           //your code here
