@@ -60,7 +60,6 @@ class Die //models one single dice cube
       {
           //your code here
           num = n;
-          //System.out.print(num + " ");
       }
       
       void show()
