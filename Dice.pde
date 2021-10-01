@@ -8,9 +8,14 @@ void setup()
   void draw()
   {
       //your code here
-      background(150);
-      bob.show();
-      bob.roll((int)(Math.random() * 6) + 1);
+      background(190);
+      for(int j = 0; j < 390; j += 65){
+        for(int i = 0; i < 390; i += 65){
+          bob = new Die(10 + i, 10 + j, 50, 50);
+          bob.show();
+          bob.roll((int)(Math.random() * 6) + 1);
+        }
+      }
   }
 
 
@@ -56,7 +61,7 @@ void setup()
       void show()
       {
           //your code here
-          fill(color(r, g, b));
+          fill(r, g, b);
           strokeWeight(2);
           rect(posX, posY, Width, Height);
           
