@@ -5,27 +5,32 @@ void setup()
       size(400, 400);
       bob = new Die(0, 0, 50, 50);
   }
-  void draw()
+  
+void draw()
   {
       //your code here
       background(190);
+      int sum = 0;
       for(int j = 0; j < 390; j += 65){
         for(int i = 0; i < 390; i += 65){
           bob = new Die(10 + i, 10 + j, 50, 50);
           bob.show();
           bob.roll((int)(Math.random() * 6) + 1);
+          sum = sum + bob.num;
         }
       }
+      fill(50);
+      text("Total: " + sum, 181, 202);
   }
 
 
-  void mousePressed()
+void mousePressed()
   {
       redraw();
   }
   
 
-  class Die //models one single dice cube
+class Die //models one single dice cube
   {
       //member variable declarations here
       int posX;
@@ -44,9 +49,9 @@ void setup()
           posY = y;
           Width = w;
           Height = h;
-          r = (int)(Math.random() * 256);
-          g = (int)(Math.random() * 256);
-          b = (int)(Math.random() * 256);
+          r = (int)(Math.random() * 206) + 50;
+          g = (int)(Math.random() * 206) + 50;
+          b = (int)(Math.random() * 206) + 50;
           num = ((int)(Math.random() * 6) + 1);
           
       }
@@ -55,7 +60,7 @@ void setup()
       {
           //your code here
           num = n;
-          System.out.print(num);
+          //System.out.print(num + " ");
       }
       
       void show()
