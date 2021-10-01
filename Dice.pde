@@ -13,14 +13,14 @@ void draw()
       int sum = 0;
       for(int j = 0; j < 390; j += 65){
         for(int i = 0; i < 390; i += 65){
-          bob = new Die(10 + i, 10 + j, 50, 50);
+          bob = new Die(12 + i, 12 + j, 50, 50);
           bob.show();
           bob.roll((int)(Math.random() * 6) + 1);
           sum = sum + bob.num;
         }
       }
       fill(50);
-      text("Total: " + sum, 181, 202);
+      text("Total: " + sum, 170, 205);
   }
 
 
