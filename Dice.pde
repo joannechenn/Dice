@@ -9,7 +9,7 @@ void setup()
 void draw()
   {
       //your code here
-      background(190);
+      background(230);
       int sum = 0;
       for(int j = 0; j < 390; j += 65){
         for(int i = 0; i < 390; i += 65){
@@ -66,7 +66,8 @@ class Die //models one single dice cube
       {
           //your code here
           fill(r, g, b);
-          strokeWeight(2);
+          stroke(0);
+          strokeWeight(3);
           rect(posX, posY, Width, Height);
           
           //drawing the circles
