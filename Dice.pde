@@ -49,9 +49,9 @@ class Die //models one single dice cube
           posY = y;
           Width = w;
           Height = h;
-          r = (int)(Math.random() * 206) + 50;
-          g = (int)(Math.random() * 206) + 50;
-          b = (int)(Math.random() * 206) + 50;
+          r = (int)(Math.random() * 191) + 65;
+          g = (int)(Math.random() * 191) + 65;
+          b = (int)(Math.random() * 191) + 65;
           num = ((int)(Math.random() * 6) + 1);
           
       }
